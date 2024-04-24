@@ -1,11 +1,7 @@
-B
-B
-B
-B
+#!/usr/bin/env python3
+""" Annotation add """
 
-A
-A
-A
-A
-A
 
+def add(a: float, b: float) -> float:
+    """ type-annotated function add"""
+    return a + b
