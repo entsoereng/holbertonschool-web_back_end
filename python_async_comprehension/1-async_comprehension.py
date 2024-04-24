@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
+''' Async Comprehension '''
 
-import asyncio
-import random
+from typing import List
+Vector = List[float]
 
-async def async_comprehension():
-    return [random.uniform(0, 10) for _ in range(10)]
+async_generator = __import__('0-async_generator').async_generator
 
-async def main():
-    print(await async_comprehension())
 
-if __name__ == "__main__":
-    asyncio.run(main())
+async def async_comprehension() -> Vector:
+    ''' Function that return a list '''
+    return [number async for number in async_generator()][:10]
