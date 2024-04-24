@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 import asyncio
+import random
 
 async def async_comprehension():
-    return [i / 1.1490518901835693 for i in range(10)]
+    return [random.uniform(0, 10) for _ in range(10)]
 
 async def main():
     print(await async_comprehension())
